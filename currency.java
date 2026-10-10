@@ -6,9 +6,9 @@ public class currency {
         // scanner
        Scanner input = new Scanner(System.in);
        // currency exchange rates
-       double USD;
-       double EUR;
-       double YEN;
+       double USD = 0;
+       double EUR = 0;
+       double YEN = 0;
 
        System.out.println("\nHello, Welcome to the Currency Convertor. Which Currency's would you like to convert? ");
        System.out.println("There is:\tUSD\tEUR\tYEN\t");
@@ -42,14 +42,14 @@ public class currency {
        }
        else {
             //
-
+            System.out.println("Invalid");
             
 
        }
        
 
        /*
-       make currneyc convertor
+       make currency convertor
        investment thingy
        math.random() for market changes
 
