@@ -25,7 +25,7 @@ public class currency {
        boolean correct = input.nextBoolean();
        // value of currency
        System.out.println("Enter how many " + currency1 + " you have: ");
-       if (currency1 == "USD") {
+       if ("USD".equals(currency1)) {
          USD = input.nextDouble();
        }
        else if (currency1 == "YEN") {
@@ -36,7 +36,7 @@ public class currency {
        }
        
       
-       if (currency1 == "USD" && currency2 == "YEN") {
+       if (currency1.equals("USD") && currency2.equals("YEN")) {
             //
             System.out.println("That is " + USD*158.89 + " YEN.");
        }
