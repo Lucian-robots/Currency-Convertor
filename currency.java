@@ -17,5 +17,8 @@ public class currency {
        String currency2 = input.nextLine();
 
        System.out.println("So your currency's are: " + currency1 + "  and " + currency2); 
-    }
+
+       System.out.println("Hello world!");
+
+    } 
 }
