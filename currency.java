@@ -9,6 +9,7 @@ public class currency {
         // investment();
         System.out.println("\nWhat would you like to do? \n1. currencyConvertor (enter: currencyConvertor) \t 2. Invest your money (enter: Invest)");
         String choice = scanner.nextLine();
+        
         if (choice.equals("currencyConvertor")) {
             convertor();
         }
@@ -19,6 +20,7 @@ public class currency {
         else {
             System.out.println("Invalid input. ");
         }
+            
     }
     
     
@@ -126,9 +128,9 @@ public class currency {
         // i have no clue how to use or make 2d arrays so i gotta learn how to make them
         // this code is going to be so bad so look away
         String[][] coins = {
-            {"Buy a Meme coin!", "Buy more shares of A MEME COIN (amc) !", "AMC"},
-            {"Buy shares of STONK", "Buy more shares of STONK!", "STONK"},
-            {"Buy shares of Flork", "Buy more shares of Flork", "FLORK"}
+            {"Buy shares of AMemeCoin (AMC)!", "Buy more shares of A MEME COIN (amc) !", "AMC"},
+            {"buy shares of STONK", "Buy more shares of STONK!", "STONK"},
+            {"buy shares of Flork", "Buy more shares of Flork", "FLORK"}
         };
         String[][] prices = {
             {" just got rugpulled. yikes. All of your money is gone", " THE COIN IS SKYROCKETING "},
@@ -152,14 +154,38 @@ public class currency {
         System.out.println("\nHello and welcome to crypto!\n What coins would you like to invest in?\n 1. A brand new coin! May go up in value ;) \t 2. A already existing coin like bitcoin (boring)\tor #3: Bro i just want to gamble");
         int choice = input.nextInt();
         if (choice == 1) {
-            System.out.println("So, you choose to invest in a brand new coin! You have $" + money + " Whart will you choose? \n" + coins[1][1] + " or " + coins[1][2] + " or " + coins[1][3]);
-            
+            //choose different coins
+            System.out.println("So, you choose to invest in a brand new coin! You have $" + money + " What will you choose? \n" + coins[0][0] + " or " + coins[1][0] + " or " + coins[2][0] + "\n");
+            choice = input.nextInt();
+            // if you buy meme coin
+            if (choice == 1) {
+                System.out.println("Wow. A meme coin. Not a good choice. ");
+               // prints first day
+                System.out.println(scenes[0][0]);
+                // prints how many shares you bought with money
+                double shares = money / coinPrices[0][0];
+                System.out.println("You bought " + shares + " of " + " AMC");
+                // do you buy more and go into debt?
+                Scanner brandNew = new Scanner(System.in);
+                System.out.println("Do you " + coins[0][1] + " or keep what you have (keep/buy): ");
+                int choice2 = brandNew.nextInt();
+                // code breaks here. I think scanner class is breaking or sum made new Scanner
+                
+                //if you dont buy more 
+                
+                if (choice2 == 1) {
+                    System.out.println(scenes[1][1]);
+                    double money1 = shares*1.5*coinPrices[0][0];
+                    System.out.println("You have $" + money1 + " Thats a lot!");
+
+                }
+            }
 
 
         }
     }
     public static void stonks(double money) {
-
+        System.out.println("Welcome to stocks! ");
 
     }
 
